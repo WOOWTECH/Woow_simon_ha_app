@@ -37,7 +37,7 @@ class ManageAndroidAutoSettingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.woowtech.io/docs/android-auto")
+        addHelpMenuProvider("https://aiot.simon.io/docs/android-auto")
     }
 
     override fun onResume() {

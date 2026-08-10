@@ -17,7 +17,7 @@ abstract class NotificationMenuProvider : MenuProvider {
             intent =
                 Intent(
                     Intent.ACTION_VIEW,
-                    "https://aiot.woowtech.io/docs/notifications/notifications-basic".toUri(),
+                    "https://aiot.simon.io/docs/notifications/notifications-basic".toUri(),
                 )
         }
     }

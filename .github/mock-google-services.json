@@ -57,6 +57,58 @@
           "current_key": "current_key"
         }
       ]
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:001c71a34fecd195",
+        "android_client_info": {
+          "package_name": "com.simon.home"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "current_key"
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:001993904c0105c1",
+        "android_client_info": {
+          "package_name": "com.simon.home.debug"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "current_key"
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:000d5329ff2ad428",
+        "android_client_info": {
+          "package_name": "com.simon.home.minimal"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "current_key"
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:001b123d653ee26e",
+        "android_client_info": {
+          "package_name": "com.simon.home.minimal.debug"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "current_key"
+        }
+      ]
     }
   ],
   "configuration_version": "1"

@@ -1,8 +1,8 @@
-# woowtech Home Android App Rebranding Implementation Plan
+# Simon Home Android App Rebranding Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Rebrand the Home Assistant Android app as "woowtech Home" with woowtech branding while maintaining full HA functionality.
+**Goal:** Rebrand the Home Assistant Android app as "Simon Home" with Simon branding while maintaining full HA functionality.
 
 **Architecture:** Modify branding assets and configuration files in the cloned Home Assistant Android repository. Changes are limited to: package ID, app name strings, color themes, launcher icons, splash screen, notification icons, and about page content. No functional changes to HA communication layer.
 
@@ -12,12 +12,12 @@
 
 ## Pre-Implementation: Asset Preparation
 
-Before starting the tasks, generate all required icon assets from the provided woowtech logo.
+Before starting the tasks, generate all required icon assets from the provided Simon logo.
 
 ### Task 0: Generate Icon Assets from Logo
 
 **Files:**
-- Source: `/home/woowtech-ai-coder/Desktop/woow_ha_app/wo_Logotype2.png`
+- Source: `/home/Simon-ai-coder/Desktop/woow_ha_app/wo_Logotype2.png`
 - Create: Multiple PNG files at different densities
 
 **Step 1: Install ImageMagick if needed**
@@ -26,14 +26,14 @@ Run: `which convert || sudo apt-get install -y imagemagick`
 
 **Step 2: Create icon generation script**
 
-Create file `/home/woowtech-ai-coder/Desktop/woow_ha_app/generate_icons.sh`:
+Create file `/home/Simon-ai-coder/Desktop/woow_ha_app/generate_icons.sh`:
 
 ```bash
 #!/bin/bash
 set -e
 
-SOURCE="/home/woowtech-ai-coder/Desktop/woow_ha_app/wo_Logotype2.png"
-ANDROID_DIR="/home/woowtech-ai-coder/Desktop/woow_ha_app/android"
+SOURCE="/home/Simon-ai-coder/Desktop/woow_ha_app/wo_Logotype2.png"
+ANDROID_DIR="/home/Simon-ai-coder/Desktop/woow_ha_app/android"
 
 # Legacy launcher icons (for pre-API 26)
 # mdpi: 48x48, hdpi: 72x72, xhdpi: 96x96, xxhdpi: 144x144, xxxhdpi: 192x192
@@ -56,12 +56,12 @@ echo "Icons generated successfully!"
 
 **Step 3: Run the script**
 
-Run: `chmod +x /home/woowtech-ai-coder/Desktop/woow_ha_app/generate_icons.sh && /home/woowtech-ai-coder/Desktop/woow_ha_app/generate_icons.sh`
+Run: `chmod +x /home/Simon-ai-coder/Desktop/woow_ha_app/generate_icons.sh && /home/Simon-ai-coder/Desktop/woow_ha_app/generate_icons.sh`
 Expected: "Icons generated successfully!"
 
 **Step 4: Verify icons were created**
 
-Run: `ls -la /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/mipmap-*/ic_launcher.png`
+Run: `ls -la /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/mipmap-*/ic_launcher.png`
 Expected: All 5 density files listed with recent timestamps
 
 ---
@@ -69,7 +69,7 @@ Expected: All 5 density files listed with recent timestamps
 ## Task 1: Change Package ID (Application ID)
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt:8`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt:8`
 
 **Step 1: Update the APPLICATION_ID constant**
 
@@ -80,18 +80,18 @@ private const val APPLICATION_ID = "io.homeassistant.companion.android"
 
 To:
 ```kotlin
-private const val APPLICATION_ID = "com.woowtech.home"
+private const val APPLICATION_ID = "com.Simon.home"
 ```
 
 **Step 2: Verify the change**
 
-Run: `grep -n "APPLICATION_ID" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt`
-Expected: Line 8 shows `com.woowtech.home`
+Run: `grep -n "APPLICATION_ID" /home/Simon-ai-coder/Desktop/woow_ha_app/android/build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt`
+Expected: Line 8 shows `com.Simon.home`
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt && git commit -m "chore: change package ID to com.woowtech.home
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt && git commit -m "chore: change package ID to com.Simon.home
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -101,12 +101,12 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 2: Change App Name
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
 
 **Step 1: Find and update the app_name string**
 
 Search for the app_name string:
-Run: `grep -n "app_name" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml | head -5`
+Run: `grep -n "app_name" /home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml | head -5`
 
 Change:
 ```xml
@@ -115,18 +115,18 @@ Change:
 
 To:
 ```xml
-<string name="app_name">woowtech Home</string>
+<string name="app_name">Simon Home</string>
 ```
 
 **Step 2: Verify the change**
 
-Run: `grep "app_name" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
-Expected: `<string name="app_name">woowtech Home</string>`
+Run: `grep "app_name" /home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
+Expected: `<string name="app_name">Simon Home</string>`
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/strings.xml && git commit -m "chore: rename app to woowtech Home
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/strings.xml && git commit -m "chore: rename app to Simon Home
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -136,11 +136,11 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 3: Update Brand Colors (Light Theme)
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
 
 **Step 1: Update primary colors**
 
-Change these colors from HA Blue (#03A9F4) to woowtech Brand Blue (#6183FC):
+Change these colors from HA Blue (#03A9F4) to Simon Home brand color (#0060A6):
 
 ```xml
 <!-- Before -->
@@ -150,10 +150,10 @@ Change these colors from HA Blue (#03A9F4) to woowtech Brand Blue (#6183FC):
 <color name="colorActionBar">#03A9F4</color>
 
 <!-- After -->
-<color name="colorPrimary">#6183FC</color>
-<color name="colorPrimaryDark">#4A6BD9</color>
-<color name="colorAccent">#6183FC</color>
-<color name="colorActionBar">#6183FC</color>
+<color name="colorPrimary">#0060A6</color>
+<color name="colorPrimaryDark">#004D85</color>
+<color name="colorAccent">#0060A6</color>
+<color name="colorActionBar">#0060A6</color>
 ```
 
 Also update the preference suggestion color (12% opacity of accent):
@@ -162,18 +162,18 @@ Also update the preference suggestion color (12% opacity of accent):
 <color name="colorPreferenceSuggestion">#1F03A9F4</color>
 
 <!-- After -->
-<color name="colorPreferenceSuggestion">#1F6183FC</color>
+<color name="colorPreferenceSuggestion">#1F0060A6</color>
 ```
 
 **Step 2: Verify the changes**
 
-Run: `grep -E "colorPrimary|colorAccent|colorActionBar" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
-Expected: All show `#6183FC` or `#4A6BD9`
+Run: `grep -E "colorPrimary|colorAccent|colorActionBar" /home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
+Expected: All show `#0060A6` or `#004D85`
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/colors.xml && git commit -m "style: update brand colors to woowtech blue (#6183FC)
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/colors.xml && git commit -m "style: update brand colors to Simon blue (#0060A6)
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -183,12 +183,12 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 4: Update Launcher Background Color
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/values/colors.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/values/colors.xml`
 
 **Step 1: Update launcher background color in common/colors.xml**
 
-The adaptive icon background color needs to match the woowtech logo background.
+The adaptive icon background color needs to match the Simon logo background.
 
 Find and update:
 ```xml
@@ -196,48 +196,48 @@ Find and update:
 <color name="colorLauncherBackground">#18BCF2</color>
 
 <!-- After -->
-<color name="colorLauncherBackground">#6183FC</color>
+<color name="colorLauncherBackground">#0060A6</color>
 ```
 
 **Step 2: Update in app/colors.xml if present**
 
-Run: `grep -n "colorLauncherBackground\|ic_launcher_foreground" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/values/colors.xml`
+Run: `grep -n "colorLauncherBackground\|ic_launcher_foreground" /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/values/colors.xml`
 
-If `ic_launcher_foreground` exists, update it to white for the woowtech logo foreground:
+If `ic_launcher_foreground` exists, update it to white for the Simon logo foreground:
 ```xml
 <color name="ic_launcher_foreground">#FFFFFF</color>
 ```
 
 **Step 3: Verify the changes**
 
-Run: `grep "colorLauncherBackground" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
-Expected: `#6183FC`
+Run: `grep "colorLauncherBackground" /home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/colors.xml`
+Expected: `#0060A6`
 
 **Step 4: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/colors.xml app/src/main/res/values/colors.xml && git commit -m "style: update launcher background to woowtech brand color
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/colors.xml app/src/main/res/values/colors.xml && git commit -m "style: update launcher background to Simon brand color
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
 
 ---
 
-## Task 5: Create woowtech Adaptive Icon Foreground
+## Task 5: Create Simon Adaptive Icon Foreground
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml`
 
-**Step 1: Replace the HA house icon with woowtech logo pattern**
+**Step 1: Replace the HA house icon with Simon logo pattern**
 
-The woowtech logo has a geometric pattern with "WOOW" stylized characters. Create a vector drawable that approximates the logo pattern in white on the brand blue background.
+The Simon logo has a geometric pattern with "WOOW" stylized characters. Create a vector drawable that approximates the logo pattern in white on the brand blue background.
 
 Replace the entire content of `ic_launcher_foreground.xml` with:
 
 ```xml
 <vector android:height="108dp" android:viewportHeight="108"
     android:viewportWidth="108" android:width="108dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- woowtech logo pattern - white geometric shapes on transparent (background is colorLauncherBackground) -->
+    <!-- Simon logo pattern - white geometric shapes on transparent (background is colorLauncherBackground) -->
     <!-- Centered in the 108dp canvas with safe zone (66dp usable area centered) -->
     <group android:translateX="21" android:translateY="21">
         <!-- Left vertical bar -->
@@ -262,17 +262,17 @@ Replace the entire content of `ic_launcher_foreground.xml` with:
 
 **Step 2: Verify the file was created properly**
 
-Run: `head -20 /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml`
+Run: `head -20 /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml`
 Expected: Vector drawable with white paths
 
 **Step 3: Copy to round variant**
 
-Run: `cp /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground_round.xml`
+Run: `cp /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground.xml /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_foreground_round.xml`
 
 **Step 4: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/ic_launcher_foreground.xml app/src/main/res/drawable/ic_launcher_foreground_round.xml && git commit -m "feat: replace launcher icon with woowtech logo pattern
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/ic_launcher_foreground.xml app/src/main/res/drawable/ic_launcher_foreground_round.xml && git commit -m "feat: replace launcher icon with Simon logo pattern
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -282,9 +282,9 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 6: Update Monochrome Icon
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome.xml`
 
-**Step 1: Update monochrome icon to woowtech pattern**
+**Step 1: Update monochrome icon to Simon pattern**
 
 Replace with the same pattern as foreground (single color for themed icons):
 
@@ -314,12 +314,12 @@ Replace with the same pattern as foreground (single color for themed icons):
 
 **Step 2: Copy to round monochrome variant**
 
-Run: `cp /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome.xml /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome_round.xml`
+Run: `cp /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome.xml /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/ic_launcher_monochrome_round.xml`
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/ic_launcher_monochrome.xml app/src/main/res/drawable/ic_launcher_monochrome_round.xml && git commit -m "feat: update monochrome icon to woowtech pattern
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/ic_launcher_monochrome.xml app/src/main/res/drawable/ic_launcher_monochrome_round.xml && git commit -m "feat: update monochrome icon to Simon pattern
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -329,11 +329,11 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 7: Update Splash Screen Icon
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/app_icon_launch.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable/app_icon_launch.xml`
 
-**Step 1: Replace splash screen icon with woowtech logo**
+**Step 1: Replace splash screen icon with Simon logo**
 
-Replace the entire content with a woowtech-branded version:
+Replace the entire content with a Simon-branded version:
 
 ```xml
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
@@ -344,8 +344,8 @@ Replace the entire content with a woowtech-branded version:
     <!-- Circular background -->
     <path
         android:pathData="M60,0 A60,60 0 1,1 60,120 A60,60 0 1,1 60,0"
-        android:fillColor="#6183FC"/>
-    <!-- woowtech logo pattern in white, centered -->
+        android:fillColor="#0060A6"/>
+    <!-- Simon logo pattern in white, centered -->
     <group android:translateX="20" android:translateY="30">
         <!-- Simplified logo pattern -->
         <path android:fillColor="#FFFFFF" android:pathData="M10,15 L10,45 L14,45 L14,15 Z"/>
@@ -363,14 +363,14 @@ Replace the entire content with a woowtech-branded version:
 
 **Step 2: Update API 31+ splash screen if exists**
 
-Run: `ls /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable-v31/`
+Run: `ls /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/drawable-v31/`
 
 If `app_icon_launch_screen.xml` exists, update it similarly.
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/app_icon_launch.xml app/src/main/res/drawable-v31/ && git commit -m "feat: update splash screen icon to woowtech branding
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/drawable/app_icon_launch.xml app/src/main/res/drawable-v31/ && git commit -m "feat: update splash screen icon to Simon branding
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -380,10 +380,10 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 8: Update Notification Icons
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/drawable/ic_stat_ic_notification.xml`
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/drawable/ic_stat_ic_notification_blue.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/drawable/ic_stat_ic_notification.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/drawable/ic_stat_ic_notification_blue.xml`
 
-**Step 1: Update main notification icon to simplified woowtech symbol**
+**Step 1: Update main notification icon to simplified Simon symbol**
 
 Replace `ic_stat_ic_notification.xml` with a simplified "W" shape:
 
@@ -393,7 +393,7 @@ Replace `ic_stat_ic_notification.xml` with a simplified "W" shape:
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <!-- Simplified woowtech "W" pattern for notification -->
+    <!-- Simplified Simon "W" pattern for notification -->
     <path
         android:pathData="M4,6 L4,18 L6,18 L6,6 Z M7,6 L11,18 L13,18 L9,6 Z M10,6 L14,18 L16,18 L12,6 Z M15,6 L15,18 L17,18 L17,6 Z M18,6 L18,18 L20,18 L20,6 Z"
         android:fillColor="#ffffff"/>
@@ -412,14 +412,14 @@ Replace `ic_stat_ic_notification_blue.xml`:
     android:viewportHeight="24">
     <path
         android:pathData="M4,6 L4,18 L6,18 L6,6 Z M7,6 L11,18 L13,18 L9,6 Z M10,6 L14,18 L16,18 L12,6 Z M15,6 L15,18 L17,18 L17,6 Z M18,6 L18,18 L20,18 L20,6 Z"
-        android:fillColor="#6183FC"/>
+        android:fillColor="#0060A6"/>
 </vector>
 ```
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/drawable/ic_stat_ic_notification.xml common/src/main/res/drawable/ic_stat_ic_notification_blue.xml && git commit -m "feat: update notification icons to woowtech branding
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/drawable/ic_stat_ic_notification.xml common/src/main/res/drawable/ic_stat_ic_notification_blue.xml && git commit -m "feat: update notification icons to Simon branding
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -429,7 +429,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 9: Update About Page Content
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/xml/preferences.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/xml/preferences.xml`
 
 **Step 1: Find and update the GitHub changelog URL**
 
@@ -443,24 +443,24 @@ Change line ~241:
     android:summary="https://github.com/home-assistant/android/releases"
     app:enableCopying="true" />
 
-<!-- After - Update to woowtech website -->
+<!-- After - Update to Simon website -->
 <Preference
     android:key="changelog_github"
     android:title="@string/changelog"
     android:icon="@drawable/ic_github"
-    android:summary="https://www.woowtech.com/support"
+    android:summary="https://www.Simon.com/support"
     app:enableCopying="true" />
 ```
 
 **Step 2: Verify the change**
 
-Run: `grep -A2 "changelog_github" /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/xml/preferences.xml`
-Expected: Shows woowtech URL
+Run: `grep -A2 "changelog_github" /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/src/main/res/xml/preferences.xml`
+Expected: Shows Simon URL
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/xml/preferences.xml && git commit -m "chore: update about page links to woowtech
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add app/src/main/res/xml/preferences.xml && git commit -m "chore: update about page links to Simon
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -470,7 +470,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 10: Add Open Source Attribution
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values/strings.xml`
 
 **Step 1: Add attribution string**
 
@@ -478,13 +478,13 @@ Add a new string for open source credits (find the appropriate location near oth
 
 ```xml
 <string name="open_source_credits">Based on Home Assistant Companion App (Apache 2.0 License)</string>
-<string name="woowtech_company">woowtech Smart Home Solutions</string>
+<string name="simon_company">Simon Home</string>
 ```
 
 **Step 2: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/strings.xml && git commit -m "chore: add open source attribution strings
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values/strings.xml && git commit -m "chore: add open source attribution strings
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -494,25 +494,25 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ## Task 11: Update Dark Mode Colors
 
 **Files:**
-- Modify: `/home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values-night/colors.xml`
+- Modify: `/home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values-night/colors.xml`
 
 **Step 1: Read the dark mode colors file**
 
-Run: `cat /home/woowtech-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values-night/colors.xml`
+Run: `cat /home/Simon-ai-coder/Desktop/woow_ha_app/android/common/src/main/res/values-night/colors.xml`
 
-**Step 2: Update any accent/primary colors to woowtech brand**
+**Step 2: Update any accent/primary colors to Simon brand**
 
-Change any `#03A9F4` references to `#6183FC`:
+Change any `#03A9F4` references to `#0060A6`:
 
 ```xml
-<color name="colorPrimary">#6183FC</color>
-<color name="colorAccent">#6183FC</color>
+<color name="colorPrimary">#0060A6</color>
+<color name="colorAccent">#0060A6</color>
 ```
 
 **Step 3: Commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values-night/colors.xml && git commit -m "style: update dark mode colors to woowtech brand
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add common/src/main/res/values-night/colors.xml && git commit -m "style: update dark mode colors to Simon brand
 
 Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ```
@@ -523,29 +523,29 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 
 **Step 1: Clean and build the project**
 
-Run: `cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && ./gradlew clean assembleFullRelease --no-daemon`
+Run: `cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && ./gradlew clean assembleFullRelease --no-daemon`
 Expected: BUILD SUCCESSFUL
 
 If build fails, check error messages and fix any issues.
 
 **Step 2: Verify APK was generated**
 
-Run: `ls -la /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/build/outputs/apk/full/release/`
+Run: `ls -la /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/build/outputs/apk/full/release/`
 Expected: APK file present
 
 **Step 3: Copy APK to output directory**
 
-Run: `cp /home/woowtech-ai-coder/Desktop/woow_ha_app/android/app/build/outputs/apk/full/release/*.apk /home/woowtech-ai-coder/Desktop/woow_ha_app/woowtech-home.apk`
+Run: `cp /home/Simon-ai-coder/Desktop/woow_ha_app/android/app/build/outputs/apk/full/release/*.apk /home/Simon-ai-coder/Desktop/woow_ha_app/Simon-home.apk`
 
 **Step 4: Final commit**
 
 ```bash
-cd /home/woowtech-ai-coder/Desktop/woow_ha_app/android && git add -A && git commit -m "chore: complete woowtech Home rebranding
+cd /home/Simon-ai-coder/Desktop/woow_ha_app/android && git add -A && git commit -m "chore: complete Simon Home rebranding
 
-- Changed package ID to com.woowtech.home
-- Renamed app to woowtech Home
-- Updated brand colors to #6183FC
-- Replaced launcher icons with woowtech logo
+- Changed package ID to com.Simon.home
+- Renamed app to Simon Home
+- Updated brand colors to #0060A6
+- Replaced launcher icons with Simon logo
 - Updated splash screen branding
 - Updated notification icons
 - Updated about page links

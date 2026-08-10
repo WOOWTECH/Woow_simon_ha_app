@@ -37,44 +37,44 @@ private object HAColors {
     val White = Color(0xFFFFFFFF)
     val Transparent = Color(0x00FFFFFF)
 
-    // Primary - woowtech Brand Blue (#6183FC) based scale
-    val Primary05 = Color(0xFF0D164D)
-    val Primary10 = Color(0xFF172570)
-    val Primary20 = Color(0xFF283B93)
-    val Primary30 = Color(0xFF3A52B6)
-    val Primary40 = Color(0xFF4D6AD9)
-    val Primary50 = Color(0xFF6183FC)  // woowtech Brand Blue
-    val Primary60 = Color(0xFF879FFC)
-    val Primary70 = Color(0xFFA5B7FF)
-    val Primary80 = Color(0xFFC3CFFF)
-    val Primary90 = Color(0xFFE1E7FF)
-    val Primary95 = Color(0xFFF0F3FF)
+    // Primary - Simon Home brand color (#0060A6) based scale
+    val Primary05 = Color(0xFF0C324E)
+    val Primary10 = Color(0xFF154B72)
+    val Primary20 = Color(0xFF266695)
+    val Primary30 = Color(0xFF3882B8)
+    val Primary40 = Color(0xFF4A9EDC)
+    val Primary50 = Color(0xFF0060A6)  // Simon Home Brand Color
+    val Primary60 = Color(0xFF85CBFE)
+    val Primary70 = Color(0xFFA5D9FF)
+    val Primary80 = Color(0xFFC3E6FF)
+    val Primary90 = Color(0xFFE1F2FF)
+    val Primary95 = Color(0xFFF0F9FF)
 
-    // Blue - woowtech Brand Blue (#6183FC) based scale (same as Primary)
-    val Blue05 = Color(0xFF0D164D)
-    val Blue10 = Color(0xFF172570)
-    val Blue20 = Color(0xFF283B93)
-    val Blue30 = Color(0xFF3A52B6)
-    val Blue40 = Color(0xFF4D6AD9)
-    val Blue50 = Color(0xFF6183FC)  // woowtech Brand Blue
-    val Blue60 = Color(0xFF879FFC)
-    val Blue70 = Color(0xFFA5B7FF)
-    val Blue80 = Color(0xFFC3CFFF)
-    val Blue90 = Color(0xFFE1E7FF)
-    val Blue95 = Color(0xFFF0F3FF)
+    // Blue - Simon Home brand color (#0060A6) based scale (same as Primary)
+    val Blue05 = Color(0xFF0C324E)
+    val Blue10 = Color(0xFF154B72)
+    val Blue20 = Color(0xFF266695)
+    val Blue30 = Color(0xFF3882B8)
+    val Blue40 = Color(0xFF4A9EDC)
+    val Blue50 = Color(0xFF0060A6)  // Simon Home Brand Color
+    val Blue60 = Color(0xFF85CBFE)
+    val Blue70 = Color(0xFFA5D9FF)
+    val Blue80 = Color(0xFFC3E6FF)
+    val Blue90 = Color(0xFFE1F2FF)
+    val Blue95 = Color(0xFFF0F9FF)
 
-    // Brand - woowtech Brand Blue (#6183FC) based scale (mirrors Primary)
-    val Brand05 = Color(0xFF0D164D)
-    val Brand10 = Color(0xFF172570)
-    val Brand20 = Color(0xFF283B93)
-    val Brand30 = Color(0xFF3A52B6)
-    val Brand40 = Color(0xFF4D6AD9)
-    val Brand50 = Color(0xFF6183FC)  // woowtech Brand Blue
-    val Brand60 = Color(0xFF879FFC)
-    val Brand70 = Color(0xFFA5B7FF)
-    val Brand80 = Color(0xFFC3CFFF)
-    val Brand90 = Color(0xFFE1E7FF)
-    val Brand95 = Color(0xFFF0F3FF)
+    // Brand - Simon Home brand color (#0060A6) based scale (mirrors Primary)
+    val Brand05 = Color(0xFF0C324E)
+    val Brand10 = Color(0xFF154B72)
+    val Brand20 = Color(0xFF266695)
+    val Brand30 = Color(0xFF3882B8)
+    val Brand40 = Color(0xFF4A9EDC)
+    val Brand50 = Color(0xFF0060A6)  // Simon Home Brand Color
+    val Brand60 = Color(0xFF85CBFE)
+    val Brand70 = Color(0xFFA5D9FF)
+    val Brand80 = Color(0xFFC3E6FF)
+    val Brand90 = Color(0xFFE1F2FF)
+    val Brand95 = Color(0xFFF0F9FF)
 
     // Cyan
     val Cyan05 = Color(0xFF00151B)
@@ -195,14 +195,14 @@ private object HAColors {
 }
 
 /**
- * woowtech Brand Colors - VI System compliant
- * Primary Brand Blue: #6183FC
+ * Simon Brand Colors - VI System compliant
+ * Primary Brand Blue: #0060A6
  * Text Primary: #212121
  * Text Secondary: #646262
  * Background: #FFFFFF
  */
 object HABrandColors {
-    val Blue = Color(0xFF6183FC)  // woowtech Brand Blue
+    val Blue = Color(0xFF0060A6)  // Simon Home Brand Color
     val Background = Color(0xFFFFFFFF)  // VI System background
     val TextPrimary = Color(0xFF212121)  // VI System text primary
     val TextSecondary = Color(0xFF646262)  // VI System text secondary

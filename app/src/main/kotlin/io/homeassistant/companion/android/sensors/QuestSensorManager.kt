@@ -22,7 +22,7 @@ class QuestSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.woowtech.io/docs/oculus-quest/"
+        return "https://aiot.simon.io/docs/oculus-quest/"
     }
 
     override val name: Int

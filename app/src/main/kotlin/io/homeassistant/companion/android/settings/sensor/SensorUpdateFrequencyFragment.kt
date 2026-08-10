@@ -39,7 +39,7 @@ class SensorUpdateFrequencyFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.woowtech.io/docs/core/sensors#android-sensors")
+        addHelpMenuProvider("https://aiot.simon.io/docs/core/sensors#android-sensors")
     }
 
     override fun onResume() {

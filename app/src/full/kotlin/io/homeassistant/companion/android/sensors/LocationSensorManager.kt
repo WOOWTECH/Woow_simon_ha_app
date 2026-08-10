@@ -1330,7 +1330,7 @@ class LocationSensorManager :
     }
 
     override fun docsLink(): String {
-        return "https://aiot.woowtech.io/docs/core/location"
+        return "https://aiot.simon.io/docs/core/location"
     }
 
     override val name: Int
