@@ -55,7 +55,7 @@ class ManageShortcutsSettingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/integrations/android-shortcuts")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 
     @RequiresApi(Build.VERSION_CODES.N_MR1)

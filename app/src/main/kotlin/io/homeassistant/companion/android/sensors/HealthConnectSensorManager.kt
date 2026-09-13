@@ -945,7 +945,7 @@ class HealthConnectSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#health-connect-sensors"
+        return "https://www.simon-apac.com/"
     }
 
     override suspend fun getAvailableSensors(context: Context): List<SensorManager.BasicSensor> {

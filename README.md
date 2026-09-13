@@ -1,10 +1,10 @@
-# Simon Home
+# Simon iBMS
 
-Simon Home is the official Android smart home control app.
+Simon iBMS is the official Android smart home control app.
 
 ## Overview
 
-Simon Home connects to your smart home server at `https://aiot.simon.io`.
+Simon iBMS connects to your smart home server at `https://www.simon-apac.com`.
 It provides local control and privacy-first home automation, built on Home Assistant open source technology.
 
 ## Features
@@ -22,9 +22,9 @@ It provides local control and privacy-first home automation, built on Home Assis
 | Property | Value |
 |---|---|
 | Primary color | #0060A6 |
-| App name | Simon Home |
+| App name | Simon iBMS |
 | Package ID | com.simon.home |
-| Server URL | https://aiot.simon.io |
+| Server URL | https://www.simon-apac.com |
 | URL scheme | simonhome:// |
 
 ## Build
@@ -55,4 +55,4 @@ Based on Home Assistant Companion for Android (Apache 2.0).
 
 ---
 
-**Simon Home**
+**Simon iBMS**

@@ -33,7 +33,7 @@ class NotificationChannelFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         addHelpMenuProvider(
-            "https://aiot.simon.io/docs/notifications/notifications-basic#notification-channels",
+            "https://www.simon-apac.com/",
         )
     }
 

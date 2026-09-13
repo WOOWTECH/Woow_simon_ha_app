@@ -95,7 +95,7 @@ fun LoadNfcView(viewModel: NfcViewModel, startDestination: String, pressedUpAtRo
                             val intent =
                                 Intent(
                                     Intent.ACTION_VIEW,
-                                    "https://aiot.simon.io/docs/integrations/universal-links".toUri(),
+                                    "https://www.simon-apac.com/".toUri(),
                                 )
                             context.startActivity(intent)
                         },

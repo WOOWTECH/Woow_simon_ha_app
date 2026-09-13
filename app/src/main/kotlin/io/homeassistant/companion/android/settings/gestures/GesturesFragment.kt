@@ -35,6 +35,6 @@ class GesturesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/integrations/gestures")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 }

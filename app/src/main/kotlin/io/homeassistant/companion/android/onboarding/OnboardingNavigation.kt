@@ -45,7 +45,7 @@ import kotlinx.serialization.Serializable
 
 @VisibleForTesting
 const val URL_GETTING_STARTED_DOCUMENTATION =
-    "https://aiot.simon.io/docs/getting_started/"
+    "https://www.simon-apac.com/"
 
 /**
  * Navigation route for the main onboarding flow.

@@ -19,7 +19,7 @@ class WetModeSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/wear-os/sensors"
+        return "https://www.simon-apac.com/"
     }
 
     private var wetModeEnabled: Boolean = false

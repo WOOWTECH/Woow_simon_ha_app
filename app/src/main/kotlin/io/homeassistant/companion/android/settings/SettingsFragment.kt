@@ -324,7 +324,7 @@ class SettingsFragment(private val presenter: SettingsPresenter, private val lan
         }
 
         findPreference<Preference>("changelog_github")?.let {
-            val link = "https://aiot.simon.io/"
+            val link = "https://www.simon-apac.com/"
             it.summary = link
             it.intent = Intent(Intent.ACTION_VIEW, link.toUri())
         }
@@ -362,7 +362,7 @@ class SettingsFragment(private val presenter: SettingsPresenter, private val lan
         }
 
         findPreference<Preference>("privacy")?.let {
-            it.summary = "https://aiot.simon.io/privacy/"
+            it.summary = "https://www.simon-apac.com/"
             it.intent = Intent(Intent.ACTION_VIEW, it.summary.toString().toUri())
         }
 

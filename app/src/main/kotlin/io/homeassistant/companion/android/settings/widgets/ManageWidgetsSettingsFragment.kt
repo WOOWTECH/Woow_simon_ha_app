@@ -29,7 +29,7 @@ class ManageWidgetsSettingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/integrations/android-widgets")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 
     override fun onResume() {

@@ -105,7 +105,7 @@ class HealthServicesSensorManager : SensorManager {
     private val areHealthServicesSensorApisAvailable = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/wear-os/sensors#health-services"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

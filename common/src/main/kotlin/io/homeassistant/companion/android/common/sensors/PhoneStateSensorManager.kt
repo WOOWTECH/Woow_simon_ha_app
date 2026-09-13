@@ -26,7 +26,7 @@ class PhoneStateSensorManager : SensorManager {
             commonR.string.sensor_description_phone_state,
             "mdi:phone",
             deviceClass = "enum",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#phone-state-sensor",
+            docsLink = "https://www.simon-apac.com/",
             updateType = SensorManager.BasicSensor.UpdateType.INTENT,
         )
 
@@ -117,7 +117,7 @@ class PhoneStateSensorManager : SensorManager {
     )
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#cellular-provider-sensor"
+        return "https://www.simon-apac.com/"
     }
     override val name: Int
         get() = commonR.string.sensor_name_phone

@@ -237,7 +237,7 @@ class NameYourDeviceViewModelTest {
 
     @Test
     fun `Given public secure url when onSaveClick then emits DeviceNameSaved with hasPlainTextAccess to false and isPubliclyAccessible true and enforces secure connection`() = runTest {
-        val secureRoute = NameYourDeviceRoute("https://aiot.simon.io", "auth_code")
+        val secureRoute = NameYourDeviceRoute("https://www.simon-apac.com", "auth_code")
         viewModel = NameYourDeviceViewModel(
             secureRoute,
             serverManager,

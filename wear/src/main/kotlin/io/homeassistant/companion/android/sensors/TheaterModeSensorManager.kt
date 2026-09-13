@@ -21,7 +21,7 @@ class TheaterModeSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/wear-os/sensors"
+        return "https://www.simon-apac.com/"
     }
     override val name: Int
         get() = commonR.string.sensor_name_theater_mode

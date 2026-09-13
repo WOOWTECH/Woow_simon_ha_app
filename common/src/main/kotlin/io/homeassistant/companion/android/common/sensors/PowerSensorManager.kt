@@ -14,7 +14,7 @@ class PowerSensorManager : SensorManager {
             commonR.string.basic_sensor_name_interactive,
             commonR.string.sensor_description_interactive,
             "mdi:cellphone",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#interactive-sensor",
+            docsLink = "https://www.simon-apac.com/",
             entityCategory = SensorManager.ENTITY_CATEGORY_DIAGNOSTIC,
             updateType = SensorManager.BasicSensor.UpdateType.INTENT,
         )
@@ -24,7 +24,7 @@ class PowerSensorManager : SensorManager {
             commonR.string.basic_sensor_name_doze,
             commonR.string.sensor_description_doze,
             "mdi:sleep",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#doze-sensor",
+            docsLink = "https://www.simon-apac.com/",
             entityCategory = SensorManager.ENTITY_CATEGORY_DIAGNOSTIC,
             updateType = SensorManager.BasicSensor.UpdateType.INTENT,
         )
@@ -34,7 +34,7 @@ class PowerSensorManager : SensorManager {
             commonR.string.basic_sensor_name_power_save,
             commonR.string.sensor_description_power_save,
             "mdi:battery-plus",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#power-save-sensor",
+            docsLink = "https://www.simon-apac.com/",
             entityCategory = SensorManager.ENTITY_CATEGORY_DIAGNOSTIC,
             updateType = SensorManager.BasicSensor.UpdateType.INTENT,
         )

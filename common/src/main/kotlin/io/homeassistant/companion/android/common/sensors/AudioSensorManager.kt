@@ -146,7 +146,7 @@ class AudioSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#audio-sensors"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

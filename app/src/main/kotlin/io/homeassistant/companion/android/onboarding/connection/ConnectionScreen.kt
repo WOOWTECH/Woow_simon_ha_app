@@ -119,7 +119,7 @@ private fun ErrorPlaceholder() {
 private fun ConnectionScreenPreview() {
     HAThemeForPreview {
         ConnectionScreen(
-            url = "https://aiot.simon.io",
+            url = "https://www.simon-apac.com",
             isLoading = false,
             isError = false,
             webViewClient = WebViewClient(),

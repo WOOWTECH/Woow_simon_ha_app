@@ -32,7 +32,7 @@ class MobileDataManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#mobile-data-sensors"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

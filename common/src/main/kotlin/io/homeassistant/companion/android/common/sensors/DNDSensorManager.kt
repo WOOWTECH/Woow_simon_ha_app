@@ -22,7 +22,7 @@ class DNDSensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#do-not-disturb-sensor"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

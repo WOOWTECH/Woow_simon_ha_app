@@ -20,7 +20,6 @@ import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.CloudOff
-import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material.icons.outlined.Warning
@@ -36,14 +35,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import io.homeassistant.companion.android.R
 import io.homeassistant.companion.android.common.R as commonR
 import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
 import io.homeassistant.companion.android.common.compose.composable.HABanner
@@ -64,10 +61,7 @@ private val MaxContentWidth = MaxButtonWidth
 @VisibleForTesting
 internal const val URL_INFO_TAG = "url_info"
 
-private const val URL_DOCUMENTATION = "https://aiot.simon.io/docs/troubleshooting/faqs/"
-private const val URL_COMMUNITY_FORUM = "https://aiot.simon.io/c/mobile-apps/android-companion/42"
-private const val URL_GITHUB_ISSUES = "https://github.com/home-assistant/android/issues"
-private const val URL_DISCORD = "https://discord.com/channels/330944238910963714/1284965926336335993"
+private const val URL_SUPPORT = "https://www.simon-apac.com/"
 
 @Composable
 internal fun ConnectionErrorScreen(
@@ -335,34 +329,7 @@ private fun ColumnScope.GetMoreHelp(onOpenExternalLink: suspend (Uri) -> Unit) {
             contentDescription = stringResource(commonR.string.connection_error_documentation_content_description),
             onClick = {
                 coroutineScope.launch {
-                    onOpenExternalLink(URL_DOCUMENTATION.toUri())
-                }
-            },
-        )
-        HAIconButton(
-            icon = Icons.Outlined.Forum,
-            contentDescription = stringResource(commonR.string.connection_error_forum_content_description),
-            onClick = {
-                coroutineScope.launch {
-                    onOpenExternalLink(URL_COMMUNITY_FORUM.toUri())
-                }
-            },
-        )
-        HAIconButton(
-            icon = ImageVector.vectorResource(R.drawable.github),
-            contentDescription = stringResource(commonR.string.connection_error_github_content_description),
-            onClick = {
-                coroutineScope.launch {
-                    onOpenExternalLink(URL_GITHUB_ISSUES.toUri())
-                }
-            },
-        )
-        HAIconButton(
-            icon = ImageVector.vectorResource(R.drawable.discord),
-            contentDescription = stringResource(commonR.string.connection_error_discord_content_description),
-            onClick = {
-                coroutineScope.launch {
-                    onOpenExternalLink(URL_DISCORD.toUri())
+                    onOpenExternalLink(URL_SUPPORT.toUri())
                 }
             },
         )

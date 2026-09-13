@@ -25,7 +25,7 @@ import okhttp3.OkHttpClient
  *
  * All the method are thread safe.
  *
- * For reference check [Websocket core documentation](https://aiot.simon.io/docs/api/websocket/)
+ * For reference check [Websocket core documentation](https://www.simon-apac.com/)
  */
 internal interface WebSocketCore {
     /**

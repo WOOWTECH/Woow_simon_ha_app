@@ -49,7 +49,7 @@ class ManageControlsSettingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/integrations/android-device-controls")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 
     override fun onResume() {

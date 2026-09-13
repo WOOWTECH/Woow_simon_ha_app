@@ -100,19 +100,17 @@ class ConnectionErrorScreenTest {
 
             onNodeWithContentDescription(stringResource(commonR.string.connection_error_documentation_content_description))
                 .performScrollTo().assertIsDisplayed().performClick()
-            assertEquals("https://aiot.simon.io/docs/troubleshooting/faqs/", urlClicked)
+            assertEquals("https://www.simon-apac.com/", urlClicked)
 
+            // Simon iBMS branding: upstream forum / GitHub / Discord entry points were removed
+            // (third-party logos pointing at the Home Assistant community). Support is a single
+            // brand link now; assert the removed ones are gone.
             onNodeWithContentDescription(stringResource(commonR.string.connection_error_forum_content_description))
-                .performScrollTo().assertIsDisplayed().performClick()
-            assertEquals("https://aiot.simon.io/c/mobile-apps/android-companion/42", urlClicked)
-
+                .assertDoesNotExist()
             onNodeWithContentDescription(stringResource(commonR.string.connection_error_github_content_description))
-                .performScrollTo().assertIsDisplayed().performClick()
-            assertEquals("https://github.com/home-assistant/android/issues", urlClicked)
-
+                .assertDoesNotExist()
             onNodeWithContentDescription(stringResource(commonR.string.connection_error_discord_content_description))
-                .performScrollTo().assertIsDisplayed().performClick()
-            assertEquals("https://discord.com/channels/330944238910963714/1284965926336335993", urlClicked)
+                .assertDoesNotExist()
 
             onNodeWithText(stringResource(commonR.string.back)).performScrollTo().assertIsDisplayed().performClick()
             assertTrue(onCloseClicked)

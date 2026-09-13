@@ -1,4 +1,4 @@
-# iOS 版 App 開發交接文件（Apporo / Simon SmartHome）
+# iOS 版 App 開發交接文件（Apporo / Simon iBMS）
 
 **版本**：2026-08-10
 **Android 版對照**：v2026.8.3-alpha7（已完成部署與功能驗收）
@@ -19,9 +19,9 @@
 
 | # | 項目 | apporo | simon |
 |---|---|---|---|
-| 1 | App 顯示名稱 | `Apporo SmartHome` | `Simon SmartHome` |
+| 1 | App 顯示名稱 | `Apporo SmartHome` | `Simon iBMS` |
 | 2 | 品牌主色 | `#8B6B24`（深褐金，白字對比 4.88:1 過 AA）**不是**品牌方 `#C49E53`—— 見 ADR-0001 | `#0060A6`（藍，與 icon 內建色一致） |
-| 3 | 品牌 HA 伺服器網域 | `aiot.apporo.io` | `aiot.simon.io` |
+| 3 | 品牌 HA 伺服器網域 | `aiot.apporo.io` | `www.simon-apac.com` |
 | 4 | URL scheme | `apporohome://` | `simonhome://` |
 | 5 | 主 logo 檔 | 在 [tools/brand/assets/apporo-logo-full.png](../tools/brand/assets/apporo-logo-full.png) （鳥形 + wordmark） | 在 simon repo 的 [tools/brand/assets/simon-icon.png](https://github.com/WOOWTECH/Woow_simon_ha_app/blob/main/tools/brand/assets/simon-icon.png)（藍底 SmnI） |
 | 6 | Launcher icon 底色 | 白 | 藍（`#0060A6`，與 SVG 內建色一致） |

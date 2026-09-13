@@ -64,7 +64,7 @@ class SsidFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/troubleshooting/networking#setting-up-the-app")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 
     override fun onResume() {

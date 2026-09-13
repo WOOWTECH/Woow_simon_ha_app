@@ -38,7 +38,7 @@ class ProximitySensorManager :
     private val ioScope: CoroutineScope = CoroutineScope(Dispatchers.IO + Job())
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#proximity-sensor"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

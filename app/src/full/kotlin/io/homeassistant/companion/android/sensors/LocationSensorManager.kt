@@ -1330,7 +1330,7 @@ class LocationSensorManager :
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/location"
+        return "https://www.simon-apac.com/"
     }
 
     override val name: Int

@@ -17,7 +17,7 @@ abstract class NotificationMenuProvider : MenuProvider {
             intent =
                 Intent(
                     Intent.ACTION_VIEW,
-                    "https://aiot.simon.io/docs/notifications/notifications-basic".toUri(),
+                    "https://www.simon-apac.com/".toUri(),
                 )
         }
     }

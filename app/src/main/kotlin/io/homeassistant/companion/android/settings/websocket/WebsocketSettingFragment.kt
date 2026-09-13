@@ -81,7 +81,7 @@ class WebsocketSettingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        addHelpMenuProvider("https://aiot.simon.io/docs/notifications/notification-local")
+        addHelpMenuProvider("https://www.simon-apac.com/")
     }
 
     override fun onResume() {

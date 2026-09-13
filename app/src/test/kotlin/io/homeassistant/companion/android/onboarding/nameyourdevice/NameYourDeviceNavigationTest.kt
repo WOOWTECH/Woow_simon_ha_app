@@ -98,8 +98,10 @@ class NameYourDeviceNavigationTest {
 
         sharedFlow.emit(NameYourDeviceNavigationEvent.Error(commonR.string.webview_error))
 
+        // Assert against the string resource rather than a hard-coded literal so the app-name
+        // rebrand (Simon iBMS) does not silently break this test again.
         assertEquals(
-            "There was an error loading Home Assistant, please review the connection settings and try again. We will attempt to try another provided URL when you select Refresh.",
+            composeTestRule.activity.getString(commonR.string.webview_error),
             errorMessage,
         )
         assertTrue(backPressed)

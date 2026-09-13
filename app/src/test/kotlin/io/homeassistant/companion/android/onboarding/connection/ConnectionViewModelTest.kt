@@ -339,7 +339,7 @@ class ConnectionViewModelTest {
 
             val request = mockk<WebResourceRequest> {
                 every { url } returns mockk<Uri> {
-                    every { this@mockk.toString() } returns "http://homeassistant.local:8123/auth/authorize?response_type=code&client_id=https://aiot.simon.io/android&redirect_uri=simonhome://auth-callback"
+                    every { this@mockk.toString() } returns "http://homeassistant.local:8123/auth/authorize?response_type=code&client_id=https://www.simon-apac.com/android&redirect_uri=simonhome://auth-callback"
                 }
             }
 

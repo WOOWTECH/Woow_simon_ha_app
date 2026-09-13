@@ -18,7 +18,7 @@ class DisplaySensorManager : SensorManager {
             commonR.string.basic_sensor_name_screen_brightness,
             commonR.string.sensor_description_screen_brightness,
             statelessIcon = "mdi:brightness-6",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#screen-brightness-sensor",
+            docsLink = "https://www.simon-apac.com/",
         )
 
         val screenOffTimeout = SensorManager.BasicSensor(
@@ -29,7 +29,7 @@ class DisplaySensorManager : SensorManager {
             "mdi:cellphone-off",
             unitOfMeasurement = "ms",
             deviceClass = "duration",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#screen-off-timeout-sensor",
+            docsLink = "https://www.simon-apac.com/",
         )
 
         val screenOrientation = SensorManager.BasicSensor(
@@ -38,7 +38,7 @@ class DisplaySensorManager : SensorManager {
             commonR.string.sensor_name_screen_orientation,
             commonR.string.sensor_description_screen_orientation,
             "mdi:screen-rotation",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#screen-orientation-sensor",
+            docsLink = "https://www.simon-apac.com/",
             updateType = SensorManager.BasicSensor.UpdateType.INTENT,
         )
 
@@ -48,7 +48,7 @@ class DisplaySensorManager : SensorManager {
             commonR.string.sensor_name_screen_rotation,
             commonR.string.sensor_description_screen_rotation,
             "mdi:screen-rotation",
-            docsLink = "https://aiot.simon.io/docs/core/sensors#screen-rotation-sensor",
+            docsLink = "https://www.simon-apac.com/",
             unitOfMeasurement = "°",
         )
     }
@@ -65,7 +65,7 @@ class DisplaySensorManager : SensorManager {
     }
 
     override fun docsLink(): String {
-        return "https://aiot.simon.io/docs/core/sensors#display-sensors"
+        return "https://www.simon-apac.com/"
     }
 
     override suspend fun requestSensorUpdate(context: Context) {

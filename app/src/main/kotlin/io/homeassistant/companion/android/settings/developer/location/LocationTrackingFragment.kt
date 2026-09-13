@@ -24,7 +24,7 @@ import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
 import javax.inject.Inject
 
 private const val FAQ_LINK =
-    "https://aiot.simon.io/docs/troubleshooting/faqs#device-tracker-is-not-updating-in-android-app"
+    "https://www.simon-apac.com/"
 
 @AndroidEntryPoint
 class LocationTrackingFragment : Fragment() {
