@@ -1,1 +1,1 @@
-The official app for Home Assistant. Control your home anywhere in the world.
+Control lighting, climate and scenes across your space. Local-first, private.

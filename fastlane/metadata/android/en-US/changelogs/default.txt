@@ -1,1 +1,5 @@
-Full release change log: https://github.com/home-assistant/android/releases/latest
+First release of Simon iBMS.
+
+Connect to your Simon iBMS server and control lighting, switches, climate, curtains, scenes and sensors across your whole space — locally on your own network, or remotely when you are away.
+
+Includes a real-time dashboard, home screen widgets, NFC tag support, and optional device sensor and location sharing for automations.

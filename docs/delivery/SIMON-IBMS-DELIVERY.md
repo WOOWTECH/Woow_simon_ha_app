@@ -199,7 +199,10 @@ Universal Links（iOS）／App Links（Android）、NFC 標籤網址、邀請連
 | 8 | **隱私政策與服務條款頁** | 兩平台 | 見 §6 已知限制第 1 項。 |
 | 9 | **`assetlinks.json` ／ `apple-app-site-association`** | 兩平台 | 放在 `https://www.simon-apac.com/.well-known/` 下。**未提供則從網頁連結開啟 App 永遠不會運作**（NFC 標籤、邀請連結同）。格式見 §2.4-A。 |
 | 10 | **推播中繼／額度／伺服器警示端點** | 兩平台 | 目前指向官網但官網無此 API，會回 404。見 §2.4-B。 |
-| 11 | **商店描述文案** | 兩平台 | `description` / `short_description` / `full_description` / `release_notes` 目前仍是 **Home Assistant 的原始行銷文案**。**不可原樣送審** — 以 Simon 品牌上架卻描述 Home Assistant，屬誤導且有被退件風險。App 名稱欄位已改好，描述須客戶自行撰寫。 |
+| 11 | **`copyright.txt` 法律主體** | iOS | 現值 `2016-2019 Robert Trencheny`（上游作者）。**必須**換成客戶法律主體全名與年份。以他人名義宣告版權會有問題。 |
+| 12 | **商店截圖與 featureGraphic** | 兩平台 | Play 現有截圖是 **Home Assistant 的官方行銷素材**，圖上直接印著「Companion app for your Home Assistant installation」。Apache 2.0 授權的是程式碼，**不含 HA 的商標、logo 與行銷設計**。iOS 則尚無截圖。須由客戶以自己的示範環境重製。詳見 §6-11。 |
+| 13 | **10 個未翻譯語系** | iOS | `de-DE` `es-ES` `es-MX` `fi` `fr-FR` `it` `nl-NL` `no` `ru` `sv` 仍為 HA 舊文案。需翻譯或移除該語系目錄。 |
+| 14 | **支援頁網址** | 兩平台 | `support_url` 目前暫指官網首頁。 |
 
 ## 5. 推播（Push）處置說明
 
@@ -260,6 +263,19 @@ PushProvider extension 仍正常嵌入並簽章。
 9. **`fastlane/Deliverfile`、`fastlane/lanes/testing.rb` 仍含上游 `io.robbie.HomeAssistant`。**
    本次未更動（客戶自行上架，不會使用我方的 fastlane 發布流程）。若客戶要沿用 fastlane，
    需自行改為 `com.simon.home`。
+
+11. **商店截圖含 Home Assistant 商標素材，絕對不可送審。**
+    Play 的 `phoneScreenshots/`、`featureGraphic.png`、`sevenInch`/`tenInch`/`tv`/`wearScreenshots`
+    全部是 Home Assistant 的官方行銷圖，圖面上有 Home Assistant 字樣與品牌配色。
+    已在 `fastlane/metadata/android/en-US/images/README-MUST-REPLACE.md` 標示。
+    **重製時不可使用本次開發驗證的截圖** —— 那些畫面來自 `woowtech-ha.woowtech.io`，
+    含真實住家／辦公室的裝置名稱與使用者帳號，屬私人測試資料。
+
+12. **商店文案已改為 Simon iBMS，但僅 3 個語系。**
+    `en-US`／`zh-Hant`／`zh-Hans` 已完成；Android 另新建 `zh-TW` 語系目錄。
+    文案刻意**不沿用** Home Assistant 的事實性宣稱（用戶數、自家硬體、百餘品牌清單），
+    改以本 App 真實具備的開放協定支援描述。推播、Watch、Wear OS、Android Auto、CarPlay
+    等**未聯調**功能未寫入文案，草稿中另列為可選段落，待功能驗收後才可加入。
 
 10. **基線既有的 7 項單元測試失敗未修復。** 見 §3.3。這些與本次品牌改版無關，
     修復它們會超出本次範圍並動到非品牌程式碼。已提供與基線的逐項對照作為佐證。
