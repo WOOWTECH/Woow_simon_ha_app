@@ -2,7 +2,7 @@
 
 **先讀 [ios-handoff.md](./ios-handoff.md)** 了解決策繼承後再照本文開工。
 
-**目標**：從 upstream `home-assistant/iOS` 生出 `Apporo SmartHome` / `Simon iBMS` iOS App，能在 iPhone 實機執行、連上 `https://woowtech-ha.woowtech.io` 或品牌自己的 HA server。
+**目標**：從 upstream `home-assistant/iOS` 生出 `Apporo SmartHome` / `Simon iBMS` iOS App，能在 iPhone 實機執行、連上 `開發方內部測試環境` 或品牌自己的 HA server。
 
 ---
 
@@ -263,7 +263,7 @@ Xcode 上方 scheme + destination 選 `iPhone 15 Simulator`，**⌘R**。
 **預期**：
 - 模擬器開機，看到品牌 splash（apporo 白底鳥形 / simon 藍底 SmnI）
 - Onboarding 頁面出現「Apporo SmartHome」或「Simon iBMS」字樣
-- URL 輸入框輸入 `https://woowtech-ha.woowtech.io` → 連線 → OAuth 授權頁 →（若 client_id 設對）→ Dashboard
+- URL 輸入框輸入 `開發方內部測試環境` → 連線 → OAuth 授權頁 →（若 client_id 設對）→ Dashboard
 
 **若卡在 OAuth "Invalid redirect URI"**：跟 Android alpha1→alpha2 一樣，client_id 頁沒宣告品牌 scheme。回第 6.4 檢查。
 
