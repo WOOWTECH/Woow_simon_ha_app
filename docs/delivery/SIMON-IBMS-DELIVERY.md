@@ -142,7 +142,7 @@ Universal Links（iOS）／App Links（Android）、NFC 標籤網址、邀請連
 ### 模擬器實測（對齊 iOS Phase 4 的 5 項）
 
 環境：iPhone 17 Pro Max / iOS 26.5 Simulator；Android Pixel AVD `woow_store_phone`。
-測試伺服器：`https://woowtech-ha.woowtech.io`。
+測試伺服器：開發方內部測試環境（Home Assistant Core）。
 
 | # | 項目 | iOS | Android |
 |---|---|---|---|
@@ -268,7 +268,7 @@ PushProvider extension 仍正常嵌入並簽章。
     Play 的 `phoneScreenshots/`、`featureGraphic.png`、`sevenInch`/`tenInch`/`tv`/`wearScreenshots`
     全部是 Home Assistant 的官方行銷圖，圖面上有 Home Assistant 字樣與品牌配色。
     已在 `fastlane/metadata/android/en-US/images/README-MUST-REPLACE.md` 標示。
-    **重製時不可使用本次開發驗證的截圖** —— 那些畫面來自 `woowtech-ha.woowtech.io`，
+    **重製時不可使用本次開發驗證的截圖** —— 那些畫面來自 開發方內部測試環境，
     含真實住家／辦公室的裝置名稱與使用者帳號，屬私人測試資料。
 
 12. **商店文案已改為 Simon iBMS，iOS 13 個語系全部完成。**
