@@ -8,58 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "mobilesdk_app_id",
-        "android_client_info": {
-          "package_name": "com.woowtech.home"
-        }
-      },
-      "api_key": [
-        {
-          "current_key": "current_key"
-        }
-      ]
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "mobilesdk_app_id",
-        "android_client_info": {
-          "package_name": "com.woowtech.home.debug"
-        }
-      },
-      "api_key": [
-        {
-          "current_key": "current_key"
-        }
-      ]
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "mobilesdk_app_id",
-        "android_client_info": {
-          "package_name": "com.woowtech.home.minimal"
-        }
-      },
-      "api_key": [
-        {
-          "current_key": "current_key"
-        }
-      ]
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "mobilesdk_app_id",
-        "android_client_info": {
-          "package_name": "com.woowtech.home.minimal.debug"
-        }
-      },
-      "api_key": [
-        {
-          "current_key": "current_key"
-        }
-      ]
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:000000000000:android:001c71a34fecd195",
         "android_client_info": {
           "package_name": "com.simon.home"

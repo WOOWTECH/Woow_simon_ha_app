@@ -22,8 +22,8 @@ diff <(git show origin/main:<path>) <path-in-this-repo>
 
 | File / area | Difference | Why | Upstream status |
 |---|---|---|---|
-| `build-logic/.../AndroidApplicationConventionPlugin.kt` | `applicationId = "com.woowtech.home"` | Company fork identity | Permanent — will never be upstreamed |
-| `.github/mock-google-services.json` | Still carries upstream package names, so it does not satisfy this fork's build | Not yet updated after the applicationId change | Should be fixed here; not an upstream concern |
+| `build-logic/.../AndroidApplicationConventionPlugin.kt` | `applicationId = "com.simon.home"` | Company fork identity | Permanent — will never be upstreamed |
+| `.github/mock-google-services.json` | Carries only this fork's `com.simon.home*` package names; the four stale `com.woowtech.*` entries were removed | CI mock must match this fork's applicationId | Not an upstream concern |
 | `app/.../util/CrashSaving.kt` | Adds `CrashSavingFailFastHandler`, latch, and diagnostic context | `FailFast` terminates via `exitProcess` without throwing, so its failures never reached the uncaught exception handler and existed only in logcat | **Upstream has the identical gap** — verified byte-identical to `origin/main` before this change. Candidate for an upstream PR |
 | `app/.../util/StrictModeDiagnostics.kt` | New file | Build/device context for the above | Same as above |
 | `app/.../HomeAssistantApplication.kt` | Registers the FailFast handler before StrictMode | Ordering matters: the first violation happens while the first activity attaches | Same as above |
